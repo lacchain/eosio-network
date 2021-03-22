@@ -66,7 +66,7 @@ git clone https://github.com/LatamLink/testnet.git ./
 The LACchain governance model requires that every transaction include two signatures, the user that originates the transaction and the writer node that allocates the required network resources to execute the transaction. The entity operating the writer node is responsible for the transaction.
 
 This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
-https://github.com/LatamLink/writer-middleware
+[Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
 
 
 ## 3. Start your node
