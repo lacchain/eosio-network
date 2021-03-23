@@ -1,26 +1,5 @@
-<p align="center">
-	<a href="https://latamlink.io">
-		<img height="200" src="./latamlink-logo.svg" >
-	</a>
-</p>
 
-<p align="center">
-	<a href="https://git.io/col">
-		<img src="https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg" alt="Collaborative Etiquette">
-	</a>
-	<a href="#">
-		<img src="https://img.shields.io/dub/l/vibe-d.svg" alt="MIT">
-	</a>
-</p>
-
-[LatamLink](https://latamlink.io) is a voluntary regional alliance led by Latin American technology companies interested in the development of the LACChain network ecosystem. The purpose of LatamLink is to offer an EOSIO-based testnet to highlight the benefits of this platform. LACChain is an initiative of BID Labs (part of the Inter-American Development Bank) whose purpose is to accompany and accelerate the development of the blockchain ecosystem in Latin America. 
-
-LatamLink is led by:
-- [EOS Argentina](https://www.eosargentina.io/)
-- [EOS Costa Rica](https://eoscostarica.io/)
-- [EOS Venezuela](https://eosvenezuela.io/)
-
-# LatamLink Testnet Node Installation
+# EOSIO Testnet Node Installation
 
 EOSIO version tag: `v2.0.9`
 
@@ -44,15 +23,15 @@ It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.9`
 ## 2. Configure LatamLink Testnet Node  
 
 ```
-mkdir ~/LatamLink-testnet
-cd ~/LatamLink-testnet
-git clone https://github.com/LatamLink/testnet.git ./
+mkdir ~/eosio-testnet
+cd ~/eosio-testnet
+git clone https://github.com/lacchain/eosio-network ./
 ```
 
-- Edit `config.ini`   
+- Edit `config.ini` depending on your node type based on the sample config files provided  
   - Enter your server's external address: `p2p-server-address = YOUR_DOMAIN_OR_IP:9876` 
 
-- Open TCP Ports (8888, 9876) on your firewall/router  
+- Open TCP Ports 80/443, 9876) on your firewall/router  
 
 ### Sample config.ini files
 
@@ -68,10 +47,10 @@ The LACchain governance model requires that every transaction include two signat
 This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
 [Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
 
-
 ## 3. Start your node
 
 **Specify a genesis.json file the first time you run nodeos**  
+
 ```
 ./start.sh --delete-all-blocks --genesis-json genesis.json
 ```  
@@ -107,12 +86,12 @@ For an updated list of Peers and their public keys visit : https://dashboard.lat
 - [http://wrt1.testnet.lacchain.eosargentina.io](http://wrt1.testnet.lacchain.eosargentina.io/v1/chain/get_info)
 
 ~~**GraphQL:** http://dfuse.testnet.latamlink.io/graphiql/~~
-(not available)
+(not available yet)
 
 ## Block Explorer
 
 ~~Block explorer located at http://explorer.testnet.latamlink.io~~
-(not available)
+(not available yet)
 
 ## Network Monitor
 
@@ -122,3 +101,25 @@ Network Monitor: https://dashboard.latamlink.io/
 Visit the documentation website:  http://latamlink.io/docs/eosio
 
 Join our <a target="_blank" href="https://t.me/latamlink">Telegram channel</a>
+
+<p align="center">
+	<a href="https://latamlink.io">
+		<img height="200" src="./latamlink-logo.svg" >
+	</a>
+</p>
+
+<p align="center">
+	<a href="https://git.io/col">
+		<img src="https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg" alt="Collaborative Etiquette">
+	</a>
+	<a href="#">
+		<img src="https://img.shields.io/dub/l/vibe-d.svg" alt="MIT">
+	</a>
+</p>
+
+[LatamLink](https://latamlink.io) is a voluntary regional alliance led by Latin American technology companies interested in the development of the LACChain network ecosystem. The purpose of LatamLink is to offer an EOSIO-based testnet to highlight the benefits of this platform. LACChain is an initiative of BID Labs (part of the Inter-American Development Bank) whose purpose is to accompany and accelerate the development of the blockchain ecosystem in Latin America. 
+
+LatamLink is led by:
+- [EOS Argentina](https://www.eosargentina.io/)
+- [EOS Costa Rica](https://eoscostarica.io/)
+- [EOS Venezuela](https://eosvenezuela.io/)
