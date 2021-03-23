@@ -20,7 +20,7 @@ apt install ./eosio_2.0.9-1-ubuntu-18.04_amd64.deb
 It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.9`
 
 
-## 2. Configure LatamLink Testnet Node  
+## 2. Configure LACChain EOSIO Node  
 
 ```
 mkdir ~/eosio-testnet
