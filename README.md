@@ -78,10 +78,11 @@ Here is an <a href="https://lacchain.eosio.cr/v1/chain/get_info" target="_blank"
 
 For an updated list of Peers and their public keys visit : https://dashboard.latamlink.io/nodes 
 
-`wrt1.testnet.lacchain.eosargentina.io:9875`
-`obs1.testnet.lacchain.eosargentina.io:9873`
-`observer.eosio.cr:9873`
-`boot.eosio.cr:9871`
+- `observer.eosio.cr:9873`
+- `writer.eosio.cr:9872`
+- `boot.eosio.cr:9871`
+- `wrt1.testnet.lacchain.eosargentina.io:9875`
+- `obs1.testnet.lacchain.eosargentina.io:9873`
 
 # API Endpoints
 
