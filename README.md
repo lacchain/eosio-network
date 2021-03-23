@@ -1,6 +1,6 @@
 <p align="center">
 	<a href="https://latamlink.io">
-		<img src="https://raw.githubusercontent.com/LatamLink/latamlink.io/master/logo.png" >
+		<img height="200" src="./latamlink-logo.svg" >
 	</a>
 </p>
 
@@ -22,23 +22,23 @@ LatamLink is led by:
 
 # LatamLink Testnet Node Installation
 
-EOSIO version tag: `v2.0.4` 
+EOSIO version tag: `v2.0.9`
 
-Chain ID: `2c1f36d2e3774cba3e47804b6463c207544ac24183194e0b96ffad31e8f4acd5`
+Chain ID: `5821525c6588037e2b066b992fcac34909a5b7f1ea8d5a393f6720fca3750d61`
 
 Genesis File: [`genesis.json`](genesis.json)
 
 ## 1. Install EOSIO from precompiled binaries   
 
-Download the latest version of EOSIO for your OS from:  https://github.com/EOSIO/eos/releases/tag/v2.0.4   
+Download the latest version of EOSIO for your OS from:  https://github.com/EOSIO/eos/releases/tag/v2.0.9
 
-For example, for ubuntu 18.04 you need to download `eosio_2.0.4-1-ubuntu-18.04_amd64.deb`  
+For example, for ubuntu 18.04 you need to download `eosio_2.0.9-1-ubuntu-18.04_amd64.deb`
 
 You can use apt to install it:  
 ```
-apt install ./eosio_2.0.4-1-ubuntu-18.04_amd64.deb   
+apt install ./eosio_2.0.9-1-ubuntu-18.04_amd64.deb
 ```
-It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.4`  
+It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.9`
 
 
 ## 2. Configure LatamLink Testnet Node  
@@ -54,6 +54,23 @@ git clone https://github.com/LatamLink/testnet.git ./
 
 - Open TCP Ports (8888, 9876) on your firewall/router  
 
+### Sample config.ini files
+
+- Validator Node: [validator-config.ini](./validator-config.ini)
+- Boot Node: [boot-config.ini](./boot-config.ini)
+- Writer Node: [writer-config.ini](./writer-config.ini)
+- Observer Node: [observer-config.ini](./observer-config.ini)
+
+### Writer middleware for RPC API 
+
+The LACchain governance model requires that every transaction include two signatures, the user that originates the transaction and the writer node that allocates the required network resources to execute the transaction. The entity operating the writer node is responsible for the transaction.
+
+This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
+[Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
+
+
+## 3. Start your node
+
 **Specify a genesis.json file the first time you run nodeos**  
 ```
 ./start.sh --delete-all-blocks --genesis-json genesis.json
@@ -66,9 +83,9 @@ tail -f stderr.txt
 
 Check if you can access your node using link `http://**YOUR_SERVER**/v1/chain/get_info` 
 
-Here is an <a href="https://latamlink.eosio.cr/v1/chain/get_info" target="_blank">API Example</a>  
+Here is an <a href="https://lacchain.eosio.cr/v1/chain/get_info" target="_blank">API Example</a>  
 
-### Starting and Stoping Nodeos
+### Starting and Stopping Nodeos
 
 - `./start.sh` Starts and restarts Nodeos service.
 
@@ -76,39 +93,32 @@ Here is an <a href="https://latamlink.eosio.cr/v1/chain/get_info" target="_blank
 
 ## P2P List
 
-`boot.testnet.latamlink.io:9876`
+For an updated list of Peers and their public keys visit : https://dashboard.latamlink.io/nodes 
 
-`latamlink.eosio.cr:9876`
+`wrt1.testnet.lacchain.eosargentina.io:9875`
+`obs1.testnet.lacchain.eosargentina.io:9873`
+`observer.eosio.cr:9873`
+`boot.eosio.cr:9871`
 
 ## API Endpoints
 
-**HTTP RPC:** [https://latamlink.eosio.cr](https://latamlink.eosio.cr/v1/chain/get_info)
+**HTTP RPC:** 
+- [https://lacchain.eosio.cr](https://lacchain.eosio.cr/v1/chain/get_info)
+- [http://wrt1.testnet.lacchain.eosargentina.io](http://wrt1.testnet.lacchain.eosargentina.io/v1/chain/get_info)
 
-**GraphQL:** http://dfuse.testnet.latamlink.io/graphiql/
+~~**GraphQL:** http://dfuse.testnet.latamlink.io/graphiql/~~
+(not available)
 
 ## Block Explorer
 
-Block explorer located at http://explorer.testnet.latamlink.io
+~~Block explorer located at http://explorer.testnet.latamlink.io~~
+(not available)
 
 ## Network Monitor
 
-Network Monitor: https://monitor.latamlink.io/  
+Network Monitor: https://dashboard.latamlink.io/
 
 ## Community Support
-Visit the documentation website http://latamlink.io/docs/eosio
+Visit the documentation website:  http://latamlink.io/docs/eosio
 
-Join our <a target="_blank" href="https://t.me/">Telegram channel</a>
-
-## Copyright 2020 LACChain
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+Join our <a target="_blank" href="https://t.me/latamlink">Telegram channel</a>
