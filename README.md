@@ -53,23 +53,6 @@ This requirement is met by running the following HTTP service as a proxy to the 
 
 ## 3. Start your node
 
-### Sample config.ini files
-
-- Validator Node: [validator-config.ini](./validator-config.ini)
-- Boot Node: [boot-config.ini](./boot-config.ini)
-- Writer Node: [writer-config.ini](./writer-config.ini)
-- Observer Node: [observer-config.ini](./observer-config.ini)
-
-### Writer middleware for RPC API 
-
-The LACchain governance model requires that every transaction include two signatures, the user that originates the transaction and the writer node that allocates the required network resources to execute the transaction. The entity operating the writer node is responsible for the transaction.
-
-This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
-[Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
-
-
-## 3. Start your node
-
 **Specify a genesis.json file the first time you run nodeos**  
 
 ```
