@@ -1,7 +1,7 @@
 
 # About EOSIO 
 
-EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio). 
+EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio) at the project documentation site. 
 
 # LACChain EOSIO Testnet Node Installation
 
@@ -74,7 +74,7 @@ Here is an <a href="https://lacchain.eosio.cr/v1/chain/get_info" target="_blank"
 
 - `./stop.sh` Performs graceful shutdown of Nodeos service.
 
-## P2P List
+# P2P List
 
 For an updated list of Peers and their public keys visit : https://dashboard.latamlink.io/nodes 
 
@@ -83,21 +83,21 @@ For an updated list of Peers and their public keys visit : https://dashboard.lat
 `observer.eosio.cr:9873`
 `boot.eosio.cr:9871`
 
-## API Endpoints
+# API Endpoints
 
 **HTTP RPC:** 
 - [https://lacchain.eosio.cr](https://lacchain.eosio.cr/v1/chain/get_info)
 - [http://wrt1.testnet.lacchain.eosargentina.io](http://wrt1.testnet.lacchain.eosargentina.io/v1/chain/get_info)
 
-## Network Monitor
+# Network Monitor
 
 Network Monitor: https://dashboard.latamlink.io/
 
-## Block Explorer
+# Block Explorer
 
 Block explorer located at http://explorer.latamlink.io
 
-## Community Support
+# Community Support
 Visit the documentation website:  http://latamlink.io/docs/eosio
 
 Join our <a target="_blank" href="https://t.me/latamlink">Telegram channel</a>
