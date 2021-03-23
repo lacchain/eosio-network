@@ -1,13 +1,17 @@
 
-# EOSIO Testnet Node Installation
+# About EOSIO 
+
+EOSIO is an open-source software that enables users to launch highly configurable blockchain networks on which developers and entrepreneurs can run highly performant blockchain applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio). 
+
+# LACChain EOSIO Testnet Node Installation
+
+Testnet Chain ID: `5821525c6588037e2b066b992fcac34909a5b7f1ea8d5a393f6720fca3750d61`
+
+Testnet Genesis File: [`genesis.json`](genesis.json)
+
+## 1. Install EOSIO from precompiled binaries 
 
 EOSIO version tag: `v2.0.9`
-
-Chain ID: `5821525c6588037e2b066b992fcac34909a5b7f1ea8d5a393f6720fca3750d61`
-
-Genesis File: [`genesis.json`](genesis.json)
-
-## 1. Install EOSIO from precompiled binaries   
 
 Download the latest version of EOSIO for your OS from:  https://github.com/EOSIO/eos/releases/tag/v2.0.9
 
@@ -49,6 +53,23 @@ This requirement is met by running the following HTTP service as a proxy to the 
 
 ## 3. Start your node
 
+### Sample config.ini files
+
+- Validator Node: [validator-config.ini](./validator-config.ini)
+- Boot Node: [boot-config.ini](./boot-config.ini)
+- Writer Node: [writer-config.ini](./writer-config.ini)
+- Observer Node: [observer-config.ini](./observer-config.ini)
+
+### Writer middleware for RPC API 
+
+The LACchain governance model requires that every transaction include two signatures, the user that originates the transaction and the writer node that allocates the required network resources to execute the transaction. The entity operating the writer node is responsible for the transaction.
+
+This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
+[Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
+
+
+## 3. Start your node
+
 **Specify a genesis.json file the first time you run nodeos**  
 
 ```
@@ -85,17 +106,13 @@ For an updated list of Peers and their public keys visit : https://dashboard.lat
 - [https://lacchain.eosio.cr](https://lacchain.eosio.cr/v1/chain/get_info)
 - [http://wrt1.testnet.lacchain.eosargentina.io](http://wrt1.testnet.lacchain.eosargentina.io/v1/chain/get_info)
 
-~~**GraphQL:** http://dfuse.testnet.latamlink.io/graphiql/~~
-(not available yet)
-
-## Block Explorer
-
-~~Block explorer located at http://explorer.testnet.latamlink.io~~
-(not available yet)
-
 ## Network Monitor
 
 Network Monitor: https://dashboard.latamlink.io/
+
+## Block Explorer
+
+Block explorer located at http://explorer.latamlink.io
 
 ## Community Support
 Visit the documentation website:  http://latamlink.io/docs/eosio
