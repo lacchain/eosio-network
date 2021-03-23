@@ -1,7 +1,7 @@
 
 # About EOSIO 
 
-EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio) at the project documentation site. 
+EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio) at the project's documentation site. 
 
 # LACChain EOSIO Testnet Node Installation
 
