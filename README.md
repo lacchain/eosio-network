@@ -1,9 +1,18 @@
+<p align="center">
+	<a href="https://eosio.lacchain.net">
+   		<img src="./lacchain-eosio-logo.png" width="500">
+   	</a>
+</p>
+<p align="center">
+	<a href="https://git.io/col">
+		<img src="https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg" alt="Collaborative Etiquette">
+	</a>
+	<a href="#">
+		<img src="https://img.shields.io/dub/l/vibe-d.svg" alt="MIT">
+	</a>
+</p>
 
-# About EOSIO 
-
-EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://latamlink.io/docs/eosio) at the project's documentation site. 
-
-# LACChain EOSIO Testnet Node Installation
+# LACChain EOSIO Node Installation
 
 Testnet Chain ID: `5821525c6588037e2b066b992fcac34909a5b7f1ea8d5a393f6720fca3750d61`
 
@@ -11,17 +20,17 @@ Testnet Genesis File: [`genesis.json`](genesis.json)
 
 ## 1. Install EOSIO from precompiled binaries 
 
-EOSIO version tag: `v2.0.9`
+EOSIO version tag: `v2.0.12`
 
-Download the latest version of EOSIO for your OS from:  https://github.com/EOSIO/eos/releases/tag/v2.0.9
+Download the latest version of EOSIO for your OS from:  https://github.com/EOSIO/eos/releases/tag/v2.0.12
 
-For example, for ubuntu 18.04 you need to download `eosio_2.0.9-1-ubuntu-18.04_amd64.deb`
+For example, for ubuntu 18.04 you need to download `eosio_2.0.12-1-ubuntu-18.04_amd64.deb`
 
 You can use apt to install it:  
 ```
-apt install ./eosio_2.0.9-1-ubuntu-18.04_amd64.deb
+apt install ./eosio_2.0.12-1-ubuntu-18.04_amd64.deb
 ```
-It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.9`
+It will download all dependencies and install EOSIO to `/usr/opt/eosio/v2.0.12`
 
 
 ## 2. Configure LACChain EOSIO Node  
@@ -49,7 +58,7 @@ git clone https://github.com/lacchain/eosio-network ./
 The LACchain governance model requires that every transaction include two signatures, the user that originates the transaction and the writer node that allocates the required network resources to execute the transaction. The entity operating the writer node is responsible for the transaction.
 
 This requirement is met by running the following HTTP service as a proxy to the writer node RPC API endpoint. 
-[Writer node RPC API middleware](https://github.com/LatamLink/writer-middleware)
+[Writer node RPC API middleware](https://github.com/lacchain/eosio-writer-middleware)
 
 ## 3. Start your node
 
@@ -76,7 +85,7 @@ Here is an <a href="https://lacchain.eosio.cr/v1/chain/get_info" target="_blank"
 
 # P2P List
 
-For an updated list of Peers and their public keys visit : https://dashboard.latamlink.io/nodes 
+For an updated list of Peers and their public keys visit : https://lacchain.eosio.online/nodes 
 
 - `observer.eosio.cr:9873`
 - `writer.eosio.cr:9872`
@@ -92,35 +101,18 @@ For an updated list of Peers and their public keys visit : https://dashboard.lat
 
 # Network Monitor
 
-Network Monitor: https://dashboard.latamlink.io/
+Network Monitor: [**lacchain.eosio.online**](https://lacchain.eosio.online)
 
 # Block Explorer
 
-Block explorer located at http://explorer.latamlink.io
+Block explorer located at [**eosio-explorer.lacchain.net**](https://eosio-explorer.lacchain.net/)
 
 # Community Support
-Visit the documentation website:  http://latamlink.io/docs/eosio
+Visit the LAChain EOSIO [**documentation website**](https://eosio.lacchain.net)
 
-Join our <a target="_blank" href="https://t.me/latamlink">Telegram channel</a>
+Join our <a target="_blank" href="https://t.me/lacchaineosio">Telegram channel</a>
 
-<p align="center">
-	<a href="https://latamlink.io">
-		<img height="200" src="./latamlink-logo.svg" >
-	</a>
-</p>
 
-<p align="center">
-	<a href="https://git.io/col">
-		<img src="https://img.shields.io/badge/%E2%9C%93-collaborative_etiquette-brightgreen.svg" alt="Collaborative Etiquette">
-	</a>
-	<a href="#">
-		<img src="https://img.shields.io/dub/l/vibe-d.svg" alt="MIT">
-	</a>
-</p>
+## About EOSIO
 
-[LatamLink](https://latamlink.io) is a voluntary regional alliance led by Latin American technology companies interested in the development of the LACChain network ecosystem. The purpose of LatamLink is to offer an EOSIO-based testnet to highlight the benefits of this platform. LACChain is an initiative of BID Labs (part of the Inter-American Development Bank) whose purpose is to accompany and accelerate the development of the blockchain ecosystem in Latin America. 
-
-LatamLink is led by:
-- [EOS Argentina](https://www.eosargentina.io/)
-- [EOS Costa Rica](https://eoscostarica.io/)
-- [EOS Venezuela](https://eosvenezuela.io/)
+EOSIO is an open-source software that enables communities to launch highly configurable blockchain networks on which developers and entrepreneurs can run very performant applications. [EOSIO](https://eos.io/) was created in 2018 and is maintained by [Block One](https://block.one/). Learn more about the [EOSIO protocol for LACChain](https://eosio.lacchain.net/en/docs/eosio) at the project's documentation site.
